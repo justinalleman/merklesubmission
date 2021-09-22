@@ -1,0 +1,94 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <script language="javascript"  src="https://code.jquery.com/jquery-1.4.2.min.js"></script>
+
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-F3w7mX95PdgyTmZZMECAngseQB83DfGTowi0iMjiWaeVhAn4FJkqJByhZMI3AhiU" crossorigin="anonymous">
+    <link rel="stylesheet" href="styles.css">
+
+	<script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/qs/6.9.4/qs.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.29.1/moment.min.js"></script>
+    
+    <link rel="stylesheet" href="https://unpkg.com/bootstrap-table@1.18.3/dist/bootstrap-table.min.css">
+    
+    <script src="report.js"></script>
+
+    <title>Registered User Report</title>
+    </head>
+    <body onLoad="getUsers()">
+
+    <nav class="navbar sticky-top navbar-expand-lg navbar-dark bg-dark">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="#">Welcome</a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup"
+                aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+                <div class="navbar-nav">
+                    <a class="nav-link" href="/report.html">Registered User Report</a>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <div class="container d-flex justify-content-center align-items-center mt-5">
+        <div class="col-md-10 offset-md-0 col-xl-10 offset-xl-0">
+            <div class="card shadow">
+                <img src="https://images.unsplash.com/photo-1575408264798-b50b252663e6?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&h=500&w=1267&q=80"
+                        alt="" class="card-img-top"/>
+                    <div class="card-body">
+                        <div class="row row-m-t">
+                            <h4 class="text-center">Registered User Report</h1>
+                        </div>                            
+                        <table id="table" class="table table-hover table-bordered table-sm row-m-t table-fixed">
+                                    <thead>
+                                        <tr>
+                                            <th data-field="firstName">First Name</th>
+                                            <th data-field="lastName">Last Name</th>
+                                            <th data-field="Address1">Address 1</th>
+                                            <th data-field="Address2">Address 2</th>
+                                            <th data-field="City">City</th>
+                                            <th data-field="State">State</th>
+                                            <th data-field="Zip">Zip</th>
+                                            <th data-field="Country">Country</th>
+                                            <th data-field="Date" data-formatter="dateFormat">Date</th>
+                                        </tr>
+                                    </thead>
+                        </table>
+
+                        <div class="row row-m-t2" id="error-section" style="display: none">
+                            <h5 class="text-center">An error occured, please try again later.</h5>
+                        </div>
+
+                        <div class="row row-m-t2">
+                            <div class="col-12">
+                                <a href="/" class="btn btn-dark">Return Home</a>
+                            </div>
+                        </div>
+                    </div>
+            </div>
+        </div>                
+    </div>                    
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+
+
+
+    <!-- Option 1: Bootstrap Bundle with Popper -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-/bQdsTh/da6pkI1MST/rWKFNjaCP5gBSY4sEBT38Q/9RBh9AH40zEOg7Hlq2THRZ" crossorigin="anonymous"></script>
+
+    <!-- <script src="index.js"></script> -->
+    <script src="https://unpkg.com/bootstrap-table@1.18.3/dist/bootstrap-table.min.js"></script>
+
+  </body>
+
+  </html>
+
+  <!-- <form action="/" method="POST" novalidate class="validated-form" enctype="multipart/form-data"> -->
